@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataLayer_DL</name>
+    </assembly>
+    <members>
+        <member name="T:DataLayer_DL.Aulas">
+            <summary>
+            Classe Aulas
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Aulas.#cctor">
+            <summary>
+            Consctructor de Aulas (Cria uma HashTable com tamanho maximo de 10 cursos)
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Aulas.InsereAula(BusinessObject_BO.Aula,System.String)">
+            <summary>
+            Método usado para inserir uma aula na tabela de hash do conjunto de aulas
+            </summary>
+            <param name="aulaAInserir"> aula que desejamos inserir </param>
+            <param name="nomeCurso"> nome do curso para ser usado como chave </param>
+            <returns> Bool dependedo do sucesso da operação </returns>
+        </member>
+        <member name="M:DataLayer_DL.Aulas.DevolveAulasCurso(System.String)">
+            <summary>
+            Método que devolve uma lista de aulas de um curso dando o nome do curso prentedido
+            </summary>
+            <param name="nomeCurso"> Nome do curso pretendido </param>
+            <returns> ArrayList com as aulas </returns>
+        </member>
+        <member name="M:DataLayer_DL.Aulas.DevolveAulasCursoOrdenados(System.String)">
+            <summary>
+            Método que devolve uma lista de aulas de um curso dando o nome do curso prentedido
+            </summary>
+            <param name="nomeCurso"> Nome do curso pretendido </param>
+            <returns> ArrayList com as aulas ordenadas </returns>
+        </member>
+        <member name="M:DataLayer_DL.Aulas.GuardaAulas">
+            <summary>
+            Método que guarda em ficheiro as aulas
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Aulas.CarregaAulas">
+            <summary>
+            Método que carregaAulas de ficheiro
+            </summary>
+        </member>
+        <member name="T:DataLayer_DL.DireccaoOrdenacao">
+            <summary>
+            Enumerador para indicar se a ordenação é ascente ou descendente 
+            </summary>
+        </member>
+        <member name="T:DataLayer_DL.Comparador">
+            <summary>
+            Classe Comparador
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Comparador.#ctor">
+            <summary>
+            Consctructor Default de comparador
+            ( Assume que a direcção é ascendente )
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Comparador.#ctor(DataLayer_DL.DireccaoOrdenacao)">
+            <summary>
+            Consctrutor que recebe por parametro a direcção que é pretendido ordenar
+            </summary>
+            <param name="direccao">  Ascente ou Descendente </param>
+        </member>
+        <member name="M:DataLayer_DL.Comparador.Compare(System.Object,System.Object)">
+            <summary>
+            Compare do IComparer compara dois objetos
+            Comparadores disponiveis: Aula
+            </summary>
+            <param name="x"> Aula1 </param>
+            <param name="y"> Aula2 </param>
+            <returns> -1/0/1 se for menor/igual/maior (-1) tambem se não encontrar o tipo </returns>
+        </member>
+        <member name="T:DataLayer_DL.RegimeEstudos">
+            <summary>
+            Enumerado de regimeEstudos
+            </summary>
+        </member>
+        <member name="T:DataLayer_DL.Curso">
+            <summary>
+            Classe ConjuntoTurma
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Curso.#cctor">
+            <summary>
+            Constructor de ConjuntoTurmas
+            </summary>
+        </member>
+        <member name="P:DataLayer_DL.Curso.NomeCurso">
+            <summary>
+            Propriedade de nomeCurso
+            </summary>
+        </member>
+        <member name="P:DataLayer_DL.Curso.ContadorTurmasInseridas">
+            <summary>
+            Propriedade contadorTurmasInseridas
+            </summary>
+        </member>
+        <member name="P:DataLayer_DL.Curso.ContadorAulasInseridas">
+            <summary>
+            Propriedade contadorAulasInseridas
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Curso.InsereAluno(System.Int32,System.String)">
+            <summary>
+            Este método insere um aluno na turma desejada
+            ( Se não conseguir são geradas exception com a mesagem de erro do porque)
+            </summary>
+            <param name="AlunoAInserir"> Aluno que desejamos inserir</param>
+            <param name="identificacaoTurma"> Indentificação da turma pretendida </param>
+            <returns> Bool dependendo do sucesso da operação </returns>
+        </member>
+        <member name="M:DataLayer_DL.Curso.VerificaSeTurmaExiste(System.String,System.Int32@)">
+            <summary>
+            Este método verifica se existe alguma turma com uma identificacaoTurma igual e devolve o indice desta
+            </summary>
+            <param name="identificacaoTurma"> Identificação da turma </param>
+            <param name="indiceTurma"> Indice onde a turma se encontra (-99 é porque não existe) </param>
+            <returns> Bool dependendo de a turma existir </returns>
+        </member>
+        <member name="M:DataLayer_DL.Curso.VerificaSeTurmaExiste(System.String)">
+            <summary>
+            Este método verifica se existe alguma turma com uma identificacaoTurma igual
+            </summary>
+            <param name="identificacaoTurma"> Identificação da turma </param>
+            <returns> bool Dependendo de a turma existir  </returns>
+            ///
+        </member>
+        <member name="M:DataLayer_DL.Curso.InsereTurma(DataLayer_DL.Turma)">
+            <summary>
+            Método que insere uma turma no conjuntoTurmas
+            </summary>
+            <param name="turmaAInserir"> turma que desejamos inserir </param>
+            <returns> bool a indicar o sucesso da operação </returns>
+        </member>
+        <member name="M:DataLayer_DL.Curso.DevolveAlunosTurma(System.String)">
+            <summary>
+            Método que devolve um int[] com os numerosAlunos de uma determinada turma
+            </summary>
+            <param name="identificacaoTurma"> nome da turma </param>
+            <returns> int[] com os numeros dos alunos </returns>
+        </member>
+        <member name="M:DataLayer_DL.Curso.GuardaCurso">
+            <summary>
+            Método que guarda a informação em ficheiro do curso
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Curso.CarregaCurso">
+            <summary>
+            Método que carrega a informação de ficheiro do curso
+            </summary>
+        </member>
+        <member name="T:DataLayer_DL.Pessoas">
+            <summary>
+            Classe Pessoas
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Pessoas.#cctor">
+            <summary>
+            Consctructor de Pessoas
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Pessoas.InsereAluno(BusinessObject_BO.Aluno)">
+            <summary>
+            Método que insere um aluno ao conjunto, gerado uma exception se o aluno já existir
+            </summary>
+            <param name="alunoAInserir"> Aluno que desejamos inserir </param>
+            <returns> bool a indicar o sucesso da operação </returns>
+        </member>
+        <member name="M:DataLayer_DL.Pessoas.ExisteAluno(BusinessObject_BO.Aluno)">
+            <summary>
+            Este método verifica se existe um determinado Aluno no conjuntoAlunos
+            </summary>
+            <param name="alunoAVerificar"> Aluno que desejamos verificar se existe </param>
+            <returns> True/False dependedo se existe </returns>
+        </member>
+        <member name="M:DataLayer_DL.Pessoas.ExisteAluno(System.Int32)">
+            <summary>
+            Este método verifica se existe um determinado Aluno no conjuntoAlunos dando apenas a identificação deste
+            </summary>
+            <param name="identificacaoAluno"> int com a identificação do aluno </param>
+            <returns> bool a indicar se o aluno existe ou não </returns>
+        </member>
+        <member name="M:DataLayer_DL.Pessoas.DevolveAluno(System.Int32,BusinessObject_BO.Aluno@)">
+            <summary>
+            Este método devolve um aluno dando o numero de identificação
+            </summary>
+            <param name="identificacaoAluno"> numero de identificação do aluno </param>
+            <param name="alunoDesejado"> aluno encontrado </param>
+            <returns> bool a indicar o sucesso </returns>
+        </member>
+        <member name="M:DataLayer_DL.Pessoas.InsereDocente(BusinessObject_BO.Docente)">
+            <summary>
+            Método que insere um docente no conjuntoDocentes, gera uma exception se o docente já existir
+            </summary>
+            <param name="docenteAInserir"> Docente a inserir </param>
+            <returns> bool dependendo do sucesso da operação </returns>
+        </member>
+        <member name="M:DataLayer_DL.Pessoas.ExisteDocente(BusinessObject_BO.Docente)">
+            <summary>
+            Método que verifica se um docente existe
+            </summary>
+            <param name="DocenteAVerificar"> docente a verificar</param>
+            <returns> bool dependendo do sucesso da operação </returns>
+        </member>
+        <member name="M:DataLayer_DL.Pessoas.ExisteDocente(System.Int32)">
+            <summary>
+            Este método verifica se um docente existe dando apenas a identificação deste
+            </summary>
+            <param name="identificacaoDocente"> numero de identificação do docente </param>
+            <returns> bool a indicar se existe ou não </returns>
+        </member>
+        <member name="M:DataLayer_DL.Pessoas.DevolveDocente(System.Int32,BusinessObject_BO.Docente@)">
+            <summary>
+            Método que devolve um docente dando o numero de identificação 
+            </summary>
+            <param name="identificacaoDocente"> numero de identificação do docete </param>
+            <param name="docenteDesejado"> docente desejado encontrar </param>
+            <returns> bool a indicar o sucesso da operação </returns>
+        </member>
+        <member name="M:DataLayer_DL.Pessoas.GuardaPessoas">
+            <summary>
+            Método que perserva a informação em ficheiro
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Pessoas.CarregaPessoas">
+            <summary>
+            Método que Carrega as pessoas do ficheiro
+            </summary>
+        </member>
+        <member name="T:DataLayer_DL.TabelaDeHash">
+            <summary>
+            Classe TabelasDeHash
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.TabelaDeHash.#ctor">
+            <summary>
+            Cria uma hashTable com o tamanho default
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.TabelaDeHash.#ctor(System.Int32)">
+            <summary>
+            Constructor de tabela de hash que recebe a capacidade maxima da tabela
+            </summary>
+            <param name="tamanhoMaxTabela"></param>
+        </member>
+        <member name="M:DataLayer_DL.TabelaDeHash.FuncaoHash(System.String,System.Int32)">
+            <summary>
+            Função de Hashing que converte um nome numa chave para a tabela de HASH
+            ( Tem uma falha caso se tente adicionar, dois m nomes diferentes mas que as letras coicidem ex: ESI e EIS)
+            </summary>
+            <param name="nomeID"> Nome Identificador </param>
+            <param name="tamanhoMaxTabela"> Tamanho Maximo da tabela </param>
+            <returns> Chave de Hash (int) </returns>
+        </member>
+        <member name="M:DataLayer_DL.TabelaDeHash.InsereAula(System.Object,System.String,System.Int32)">
+            <summary>
+            Método para inserir um objeto numa tabela de hash, usando como chave um nomeIdentificador (Ex. nomeCurso)
+            </summary>
+            <param name="objectoAInserir"> Objecto que desejamos inserir </param>
+            <param name="nomeID"> nome identificador da chave </param>
+            <param name="tamanhoMaxTabela"> tamanho maximo da tabela </param>
+            <returns> bool dependedo do sucesso da operação </returns>
+        </member>
+        <member name="M:DataLayer_DL.TabelaDeHash.DevolveListaIdentificador(System.String,System.Int32,System.Collections.ArrayList@)">
+            <summary>
+            Devolve a lista que um identificador(chave) possa ter
+            </summary>
+            <param name="nomeID"> nome identificador </param>
+            <param name="tamanhoMaxTabela"> tamanho maximo da tabela </param>
+            <param name="listaPretendida"> lista que pretendemos obter </param>
+            <returns> bool indicado se operação teve sucesso (se a chave existe ou não) </returns>
+        </member>
+        <member name="T:DataLayer_DL.Turma">
+            <summary>
+            Classe Turma
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Turma.#ctor">
+            <summary>
+            Constructor Default de turma
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Turma.#ctor(System.String)">
+            <summary>
+            Constructor de turma que recebe a sua identificação
+            (Assume como tamanho do conjunto de alunos valores pre-definidos (30))
+            </summary>
+            <param name="identificacaoTurma"> identificação da turma </param>
+        </member>
+        <member name="M:DataLayer_DL.Turma.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor de turma que recebe a sua identificação e o tamanho do conjunto de Alunos
+            </summary>
+            <param name="quantidadeAlunos"> Tamanho maximo da turma  </param>
+            <param name="identificacaoTurma"> identificação da turma </param>
+        </member>
+        <member name="P:DataLayer_DL.Turma.IdentificacaoTurma">
+            <summary>
+            Propriedade de identificacaoTurma
+            </summary>
+        </member>
+        <member name="P:DataLayer_DL.Turma.ConjuntoAlunosIdentificacao">
+            <summary>
+            Propriedade de conjuntoAlunos
+            </summary>
+        </member>
+        <member name="P:DataLayer_DL.Turma.ContadorAlunos">
+            <summary>
+            Propriedade de contadorAlunos
+            </summary>
+        </member>
+        <member name="M:DataLayer_DL.Turma.InsereAluno(System.Int32)">
+            <summary>
+            Método que insere um aluno no conjuntoAlunos
+            </summary>
+            <param name="alunoAInserir"> Aluno que desejamos inserir </param>
+            <returns> Bool Depedendo se inseriu com sucesso </returns>
+        </member>
+        <member name="M:DataLayer_DL.Turma.ExisteAluno(System.Int32)">
+            <summary>
+            Este método verifica se existe um determinado Aluno no conjuntoAlunos
+            </summary>
+            <param name="alunoAVerificar"> Aluno que desejamos verificar se existe </param>
+            <returns> True/False dependedo se existe </returns>
+        </member>
+        <member name="M:DataLayer_DL.Turma.InsereConjuntoAlunos(System.Int32[])">
+            <summary>
+            Método que insere(ou substitui) um conjunto de alunos na turma
+            </summary>
+            <param name="conjuntoNumeroAlunos"> int[] com as identificações dos alunos </param>
+            <returns> bool a indicar o sucesso da operação </returns>
+        </member>
+    </members>
+</doc>

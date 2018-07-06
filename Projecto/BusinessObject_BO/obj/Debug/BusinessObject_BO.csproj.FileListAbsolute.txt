@@ -1,0 +1,6 @@
+D:\Utilizador\Nova pasta\Dropbox\Trabalho LP II\Acesso_A_Sala\BusinessObject_BO\bin\Debug\BusinessObject_BO.dll
+D:\Utilizador\Nova pasta\Dropbox\Trabalho LP II\Acesso_A_Sala\BusinessObject_BO\bin\Debug\BusinessObject_BO.pdb
+D:\Utilizador\Nova pasta\Dropbox\Trabalho LP II\Acesso_A_Sala\BusinessObject_BO\obj\Debug\BusinessObject_BO.dll
+D:\Utilizador\Nova pasta\Dropbox\Trabalho LP II\Acesso_A_Sala\BusinessObject_BO\obj\Debug\BusinessObject_BO.pdb
+D:\Utilizador\Nova pasta\Dropbox\Trabalho LP II\Acesso_A_Sala\BusinessObject_BO\obj\Debug\BusinessObject_BO.csprojResolveAssemblyReference.cache
+D:\Utilizador\Nova pasta\Dropbox\Trabalho LP II\Acesso_A_Sala\BusinessObject_BO\bin\Debug\BusinessObject_BO.XML

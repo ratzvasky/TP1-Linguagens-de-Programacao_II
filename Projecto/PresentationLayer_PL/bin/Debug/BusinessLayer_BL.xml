@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BusinessLayer_BL</name>
+    </assembly>
+    <members>
+        <member name="T:BusinessLayer_BL.ValidaDadosInput">
+            <summary>
+            Classe ValidaDadosInput
+            </summary>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosInput.InsereAluno(BusinessObject_BO.Aluno)">
+            <summary>
+            Método que insere um aluno no conjuntoAlunos do Pessoas
+            </summary>
+            <param name="aluno"> aluno que sejamos inserir </param>
+            <returns> bool depedendo do sucesso</returns>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosInput.InsereDocente(BusinessObject_BO.Docente)">
+            <summary>
+            Método que insere um docente no conjuntoDocentes da classe Pessoas 
+            </summary>
+            <param name="docenteAInserir"> Docente que desejamos inserir </param>
+            <returns> bool dependedo do sucesso </returns>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosInput.CriaTurma(System.String,System.String,System.Int32[])">
+            <summary>
+            Método que insere uma turma a um determinado curso
+            </summary>
+            <param name="nomeTurma"> nome da turma que desejamos inserir </param>
+            <param name="nomeCurso"> nome do curso que queremos adicionar a turma </param>
+            <param name="conjuntoNumerosAlunos"> conjunto dos numeros dos alunos da turma </param>
+            <returns> bool a indicar se inseriou a turma com sucesso </returns>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosInput.InsereAula(BusinessObject_BO.Aula,System.String)">
+            <summary>
+            Método que insere uma Aula no Aulas
+            </summary>
+            <param name="aulaAInserir"> objecto aula a inserir </param>
+            <param name="nomeCurso"> nome do curso da aula </param>
+            <returns> bool a indicar se houve sucesso</returns>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosInput.CarregaInformacao">
+            <summary>
+            Método que carrega a informação das classes Pessoas, Curso e Aulas de ficheiro
+            </summary>
+        </member>
+        <member name="T:BusinessLayer_BL.ValidaDadosOutput">
+            <summary>
+            Classe ValidaDadosOutput
+            </summary>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosOutput.PesquisaAluno(System.Int32)">
+            <summary>
+            Método que controla a pesquisa de um aluno
+            </summary>
+            <param name="identificacaoAluno"> numero de aluno </param>
+            <returns> o Aluno desejado </returns>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosOutput.VerificaSeAlunoExiste(System.Int32)">
+            <summary>
+            Método que verifica se um determinado aluno existe no Pessoas 
+            </summary>
+            <param name="numeroAluno"> numero do aluno que desejamos verificar </param>
+            <returns> bool a indicar se existe </returns>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosOutput.VerificaSeDocenteExiste(System.Int32)">
+            <summary>
+            Método que verifica se um determinado Docente existe no Pessoas
+            </summary>
+            <param name="numeroDocente"> numero do docente </param>
+            <returns> bool a indicar se existe ou não </returns>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosOutput.VerificaSeTurmaExiste(System.String)">
+            <summary>
+            Método que verifica se uma determinada Turma existe
+            </summary>
+            <param name="nomeTurma"> nome da turma </param>
+            <returns> bool a indicar se a turma existe ou não </returns>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosOutput.PesquisaDocente(System.Int32)">
+            <summary>
+            Método que controla a pesquisa de um aluno 
+            </summary>
+            <param name="identificacaoDocente"> numero de identificação de um docente </param>
+            <returns> Devolve o docente desejado </returns>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosOutput.DevolveConjuntoAlunos(System.String,System.String)">
+            <summary>
+            Método que devolve o conjunto de alunos de uma turma dando o nome do curso e nome da turma 
+            </summary>
+            <param name="nomeTurma"> nome da turma </param>
+            <param name="nomeCurso"> nome do curso </param>
+            <returns> int[] com os numeros dos alunos </returns>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosOutput.DevolveConjuntoAulas(System.String)">
+            <summary>
+            Método que permite obter um conjunto de aulas ordenadas de um determinado curso
+            </summary>
+            <param name="nomeCurso"> nome do curso </param>
+            <returns> Aula[] com as aulas do curso ordenadas </returns>
+        </member>
+        <member name="M:BusinessLayer_BL.ValidaDadosOutput.GuardaInformacao">
+            <summary>
+            Método que guarda a informação de Pessoas, Curso e Aulas em ficheiro Binario
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BusinessLayer_BL.ValidaDados">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>ValidaDados.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessObject_BO.Aluno">
+    <Position X="2.75" Y="3.75" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BusinessObject_BO.Docente">
+    <Position X="0.5" Y="3.75" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BusinessObject_BO.Pessoa">
+    <Position X="1.25" Y="0.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DataLayer_DL.ConjuntoTurma">
+    <Position X="6.5" Y="2.75" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DataLayer_DL.Turma">
+    <Position X="8.75" Y="2.75" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="BusinessObject_BO.RegimeEstudos">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="BusinessObject_BO.UnidadeCurricular">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

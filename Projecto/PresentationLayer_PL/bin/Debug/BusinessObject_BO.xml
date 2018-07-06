@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BusinessObject_BO</name>
+    </assembly>
+    <members>
+        <member name="T:BusinessObject_BO.Aluno">
+            <summary>
+            Classe Aluno
+            </summary>
+        </member>
+        <member name="M:BusinessObject_BO.Aluno.#ctor">
+            <summary>
+            Constructor Default de Aluno
+            (Assume que o Aluno tem as proprinasRegularizadas)
+            </summary>
+        </member>
+        <member name="M:BusinessObject_BO.Aluno.#ctor(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Constructor de Aluno
+            </summary>
+            <param name="nomeAluno"> Nome do aluno </param>
+            <param name="identificacaoAluno"> Numero de Aluno </param>
+            <param name="regimeEstudos"> Regime de estudos (Laboral ou pos-Laboral) </param>
+        </member>
+        <member name="P:BusinessObject_BO.Aluno.PropinasRegularizadas">
+            <summary>
+            Propridade de propinasRegularizadas
+            </summary>
+        </member>
+        <member name="T:BusinessObject_BO.UnidadeCurricular">
+            <summary>
+            Enumerado de unidadeCurricular
+            </summary>
+        </member>
+        <member name="T:BusinessObject_BO.Aula">
+            <summary>
+            Classe Aula
+            </summary>
+        </member>
+        <member name="M:BusinessObject_BO.Aula.#ctor">
+            <summary>
+            Consctructor Default de Aula
+            </summary>
+        </member>
+        <member name="M:BusinessObject_BO.Aula.#ctor(System.DateTime,System.Int32,System.Int32,System.String,BusinessObject_BO.UnidadeCurricular)">
+            <summary>
+            Consctructor de Aula que recebe os varios parametros de aula
+            </summary>
+            <param name="data"> Data e hora da aula </param>
+            <param name="docente"> Docente que vai lecionar a aula </param>
+            <param name="sala"> Numero da sala </param>
+            <param name="identificacaoTurma"> Identificação da turma </param>
+        </member>
+        <member name="P:BusinessObject_BO.Aula.Data">
+            <summary>
+            Propriedade de data
+            </summary>
+        </member>
+        <member name="P:BusinessObject_BO.Aula.NumeroDocente">
+            <summary>
+            Propriedade de numeroDocente
+            </summary>
+        </member>
+        <member name="P:BusinessObject_BO.Aula.Sala">
+            <summary>
+            Propriedade de sala
+            </summary>
+        </member>
+        <member name="P:BusinessObject_BO.Aula.IdentificacaoTurma">
+            <summary>
+            Propriedade de identificaçãoTurma
+            </summary>
+        </member>
+        <member name="P:BusinessObject_BO.Aula.UnidadeCurricular">
+            <summary>
+            Propriedade de unidadeCurricular
+            </summary>
+        </member>
+        <member name="M:BusinessObject_BO.Aula.Equals(System.Object)">
+            <summary>
+            Método que faz overide ao Equals
+            (Compara a data e o identificacaoTurma)
+            </summary>
+            <param name="obj"> Objecto a ser comparado </param>
+            <returns> True/False dependo se é igual </returns>
+        </member>
+        <member name="M:BusinessObject_BO.Aula.op_Equality(BusinessObject_BO.Aula,BusinessObject_BO.Aula)">
+            <summary>
+            Método que define o == para o objecto Aula
+            </summary>
+            <param name="aula1"> Primeira Aula a comparar </param>
+            <param name="aula2"> Segunda Aula a comparar </param>
+            <returns> True/False dependo se é igual </returns>
+        </member>
+        <member name="M:BusinessObject_BO.Aula.op_Inequality(BusinessObject_BO.Aula,BusinessObject_BO.Aula)">
+            <summary>
+            Método que define o != para o objecto Aula
+            </summary>
+            <param name="aula1"> Primeira aula a comparar </param>
+            <param name="aula2"> Segunda aula a comparar </param>
+            <returns> True/False dependo se é diferente </returns>
+        </member>
+        <member name="T:BusinessObject_BO.GrauAcademico">
+            <summary>
+            Enumerado de Unidade Curricular
+            </summary>
+        </member>
+        <member name="T:BusinessObject_BO.Docente">
+            <summary>
+            Classe Docente
+            </summary>
+        </member>
+        <member name="M:BusinessObject_BO.Docente.#ctor">
+            <summary>
+            Constructor Default de Docente
+            (Atribui o GrauAcademico como Licenciado)
+            </summary>
+        </member>
+        <member name="M:BusinessObject_BO.Docente.#ctor(System.String,System.Int32,BusinessObject_BO.GrauAcademico)">
+            <summary>
+            Constructor de Docente
+            </summary>
+            <param name="nomeDocente"> Nome do docente </param>
+            <param name="numeroIdentificacao"> numero de identificaçao </param>
+            <param name="unidadeCurricular"> Unidade Curricular que o docente leciona </param>
+        </member>
+        <member name="P:BusinessObject_BO.Docente.GrauAcademico">
+            <summary>
+            Propriedade de GrauAcademico
+            </summary>
+        </member>
+        <member name="T:BusinessObject_BO.Pessoa">
+            <summary>
+            Classe Abstracta Pessoa
+            </summary>
+        </member>
+        <member name="M:BusinessObject_BO.Pessoa.#ctor">
+            <summary>
+            Consctructor Default de pessoa
+            </summary>
+        </member>
+        <member name="M:BusinessObject_BO.Pessoa.#ctor(System.String,System.Int32)">
+            <summary>
+            Consctructor de Pessoa que recebe os parametros do exterior
+            </summary>
+            <param name="nomePessoa"> Nome da pessoa </param>
+            <param name="numeroIdentificacao"> Numero Identificação 'xxxxx' </param>
+        </member>
+        <member name="P:BusinessObject_BO.Pessoa.NomePessoa">
+            <summary>
+            Propriedade De nomePessoa
+            </summary>
+        </member>
+        <member name="P:BusinessObject_BO.Pessoa.NumeroIdentificacao">
+            <summary>
+            Propriedade De numeroIdentificacao
+            </summary>
+        </member>
+        <member name="M:BusinessObject_BO.Pessoa.Equals(System.Object)">
+            <summary>
+            Método que faz overide ao Equals
+            (Compara o nomePessoa e o numeroIdentificação)
+            </summary>
+            <param name="obj"> Objecto a ser comparado </param>
+            <returns> True/False dependo se é igual </returns>
+        </member>
+        <member name="M:BusinessObject_BO.Pessoa.op_Equality(BusinessObject_BO.Pessoa,BusinessObject_BO.Pessoa)">
+            <summary>
+            Método que define o == para o objecto Pessoa
+            </summary>
+            <param name="pessoa1"> Primeira Pessoa a comparar </param>
+            <param name="pessoa2"> Segunda Pessoa a comparar </param>
+            <returns> True/False dependo se é igual </returns>
+        </member>
+        <member name="M:BusinessObject_BO.Pessoa.op_Inequality(BusinessObject_BO.Pessoa,BusinessObject_BO.Pessoa)">
+            <summary>
+            Método que define o != para o objecto Pessoa
+            </summary>
+            <param name="pessoa1"> Primeira Pessoa a comparar </param>
+            <param name="pessoa2"> Segunda Pessoa a comparar </param>
+            <returns> True/False dependo se é diferente </returns>
+        </member>
+    </members>
+</doc>

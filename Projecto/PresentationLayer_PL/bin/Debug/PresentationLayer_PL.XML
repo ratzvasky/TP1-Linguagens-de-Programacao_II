@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PresentationLayer_PL</name>
+    </assembly>
+    <members>
+        <member name="T:PresentationLayer_PL.Program">
+            <summary>
+            Classe Principal (Program)
+            </summary>
+        </member>
+        <member name="M:PresentationLayer_PL.Program.Main(System.String[])">
+            <summary>
+            Método Principal (Main)
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:PresentationLayer_PL.Program.Menu">
+            <summary>
+            Método que apresenta o Menu e recolhe a opçãoEscolhida
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PresentationLayer_PL.Program.RecebeAluno">
+            <summary>
+            Método que recebe um aluno do utilizador
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PresentationLayer_PL.Program.RecebeDocente">
+            <summary>
+            Método que recebe um docente do utilizador
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PresentationLayer_PL.Program.RecebeAula">
+            <summary>
+            Método que recebe uma aula do utilizador
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
